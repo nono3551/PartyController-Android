@@ -14,3 +14,4 @@
 .cxx
 app/cert/
 app/release/
+app/google-services.json
