@@ -1,4 +1,4 @@
-package com.nonko.partyremote.repositories.server.client
+package com.partyremote.android.repositories.server.client
 
 import sk.backbone.android.shared.repositories.server.client.IHttpResponseWrapper
 

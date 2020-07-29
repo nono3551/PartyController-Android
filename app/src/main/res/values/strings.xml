@@ -1,4 +1,14 @@
 <resources>
+
+    <string name="global_please_wait">Počkajte prosím</string>
+
+    <string name="exception_no_connection">Skontrolujte pripojenie na internet.</string>
+    <string name="exception_dialog_title">Vyskytol sa problém</string>
+    <string name="exception_login_validation">E-mail a heslo musia byť vyplnené</string>
+    <string name="exception_unexpected_error">Nastala neočakávaná chyba. Prosíme kontaktujte nás.</string>
+
+
+
     <string name="app_name">PartyRemote</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->

@@ -1,13 +1,13 @@
-package com.nonko.partyremote.ui.main
+package com.partyremote.android.ui.main
 
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.nonko.partyremote.R
-import com.nonko.partyremote.ui.base.ToolbarActivity
-import com.nonko.partyremote.ui.create_party_session.CreatePartySessionActivity
+import com.partyremote.android.R
+import com.partyremote.android.ui.base.ToolbarActivity
+import com.partyremote.android.ui.create_party_session.CreatePartySessionActivity
 import sk.backbone.android.shared.utils.setSafeOnClickListener
 
 class MainActivity : ToolbarActivity() {

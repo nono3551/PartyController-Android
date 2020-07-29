@@ -1,7 +1,7 @@
-package com.nonko.partyremote.ui.base
+package com.partyremote.android.ui.base
 
 import android.view.View
-import com.nonko.partyremote.R
+import com.partyremote.android.R
 import kotlinx.android.synthetic.main.ui_toolbar.*
 import kotlinx.android.synthetic.main.ui_toolbar.view.*
 import sk.backbone.android.shared.ui.screens.BaseSharedToolbarActivity
