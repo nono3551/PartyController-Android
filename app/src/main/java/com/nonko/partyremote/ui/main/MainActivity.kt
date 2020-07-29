@@ -11,7 +11,7 @@ import com.nonko.partyremote.ui.create_party_session.CreatePartySessionActivity
 import sk.backbone.android.shared.utils.setSafeOnClickListener
 
 class MainActivity : ToolbarActivity() {
-    override fun getRightView(): View? {
+    override fun getCenterView(): View? {
         return ImageView(this).apply {
             layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
             setImageResource(android.R.drawable.ic_input_add)
