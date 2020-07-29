@@ -5,7 +5,9 @@ import android.content.Intent
 import android.view.View
 import android.widget.TextView
 import com.partyremote.android.R
+import com.partyremote.android.execution_handling.Executor
 import com.partyremote.android.ui.base.ToolbarActivity
+import sk.backbone.android.shared.utils.setSafeOnClickListener
 
 class CreatePartySessionActivity : ToolbarActivity() {
 
@@ -13,6 +15,16 @@ class CreatePartySessionActivity : ToolbarActivity() {
         return TextView(this).apply {
             text = "New party session"
             setTextColor(getColor(android.R.color.white))
+            setSafeOnClickListener {
+                withExecutorParams {
+                    Executor<Any?>(it).apply {
+                        ioOperation = {
+                            val x = CreatePartySessionViewModel.create(this@CreatePartySessionActivity).getParty()
+                            x
+                        }
+                    }.execute()
+                }
+            }
         }
     }
 
