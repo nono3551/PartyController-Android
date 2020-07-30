@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+    <item name="ui_main_session_view_plus" type="id" />
+    <item name="ui_party_session_view_nameOfSession" type="id" />
+</resources>
