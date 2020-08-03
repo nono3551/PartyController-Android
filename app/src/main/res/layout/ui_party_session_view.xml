@@ -12,9 +12,8 @@
         android:layout_weight="4"
         android:orientation="vertical"
         android:gravity="center">
-        <ImageButton
+        <ImageView
             android:id="@+id/ui_main_session_view_appIcon"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_app_icon" />
@@ -74,7 +73,6 @@
                 android:background="@color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -121,13 +119,11 @@
                 android:src="@drawable/ic_baseline_next" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
         <View
             android:layout_width="380dp"
             android:layout_gravity="end"
@@ -139,15 +135,12 @@
             android:layout_gravity="end"
             android:layout_height= "2dp"
             android:background="@color/white" />
-
         <View
             android:layout_width="40dp"
             android:layout_marginTop="3dp"
             android:layout_gravity="end"
             android:layout_height= "2dp"
             android:background="@color/white" />
-
-
         <TextView
             android:id="@+id/ui_main_session_view_currentSong"
             android:layout_width="match_parent"
@@ -158,7 +151,6 @@
             android:textSize="15sp"
             tools:text="Current song"
             tools:ignore="NestedWeights" />
-
         <TextView
             android:id="@+id/ui_main_session_view_artist"
             android:layout_width="match_parent"
@@ -167,17 +159,11 @@
             android:gravity="center"
             android:textColor="@color/white"
             tools:text="artist" />
-
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
             tools:ignore="NestedWeights">
         </Space>
-
-
-
     </LinearLayout>
-
-
 </LinearLayout>
