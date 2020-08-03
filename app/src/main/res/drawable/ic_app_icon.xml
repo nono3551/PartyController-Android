@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="70dp"
+    android:height="70dp"
+    android:viewportWidth="175.9"
+    android:viewportHeight="175.9">
+  <path
+      android:pathData="M10.1,0h3.6v175.92h-3.6z"
+      android:fillColor="@color/iconColor"
+      tools:ignore="VectorRaster" />
+  <path
+      android:pathData="M6.2,0h1.2v175.92h-1.2z"
+      android:fillColor="@color/iconColor"/>
+  <path
+      android:pathData="M3.1,0h1.2v175.92h-1.2z"
+      android:fillColor="@color/iconColor"/>
+  <path
+      android:pathData="M0,0h1.2v175.92h-1.2z"
+      android:fillColor="@color/iconColor"/>
+  <path
+      android:pathData="M18.5,0V175.9H175.9V146.6a72.8,72.8 0,0 1,0 -117.3V0ZM126.7,121.4c-2.3,3.2 -7.7,8.5 -18.5,8.7 -7.2,0.1 -12.6,-3.4 -14.6,-9.9s3,-13.1 8.6,-16.7a19.8,19.8 0,0 1,18 -1.2c0.4,-7.7 0.8,-15.2 0,-37.7h0c-21.3,2.2 -27.9,4 -48,9.1v38.6c0,5.5 1.1,13.5 -0.7,17.8 -2.7,6.6 -8.4,10.8 -16.5,11.5 -4.4,0.4 -8.6,-0.2 -11.6,-1.9s-8.6,-7.2 -6.7,-13.9c2.5,-8.7 15.6,-17 26.9,-11.8 0.7,-30.4 0.2,-59.5 0.2,-63.6 0,-1.4 0,-4 0.4,-4.3 4.2,-2.9 24.3,-8 24.3,-8h0c17.2,-3.8 26.6,-3.9 30,-3.9s10,0 10.5,0.4 0.1,61.2 0.1,61.2C129.1,104.5 130.5,116.3 126.7,121.4Z"
+      android:fillColor="@color/iconColor"
+      android:fillType="evenOdd"/>
+</vector>
