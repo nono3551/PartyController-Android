@@ -1,6 +1,9 @@
 package com.partyremote.android.ui.base
 
+import android.graphics.Typeface
+import android.util.TypedValue
 import android.view.View
+import android.widget.TextView
 import com.partyremote.android.R
 import kotlinx.android.synthetic.main.ui_toolbar.*
 import kotlinx.android.synthetic.main.ui_toolbar.view.*
@@ -27,5 +30,14 @@ abstract class ToolbarActivity : BaseSharedToolbarActivity(){
         getLeftView()?.let { common_toolbar.toolbar_left_placeholder.addView(it) }
         getCenterView()?.let { common_toolbar.toolbar_center_placeholder.addView(it) }
         getRightView()?.let { common_toolbar.toolbar_right_placeholder.addView(it) }
+    }
+
+    protected fun createToolbarText(value: String): TextView {
+        return TextView(this).apply {
+            text = value
+            setTextColor(getColor(android.R.color.white))
+            setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
+            setTypeface(typeface, Typeface.BOLD)
+        }
     }
 }

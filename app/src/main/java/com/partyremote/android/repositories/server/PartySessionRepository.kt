@@ -6,8 +6,8 @@ import com.partyremote.android.entities.PartySession
 import java.util.*
 
 class PartySessionRepository(context: Context) : ServerRepository(context) {
-    suspend fun getPartySession(sessionId: UUID): PartySession? {
-        return buildAndExecuteRequest(Request.Method.GET, null, "partysession/${sessionId}")
+    suspend fun joinPartySession(sessionId: String?, queuePassword: String?): PartySession? {
+        return buildAndExecuteRequest(Request.Method.GET, null, "partysession/${sessionId}", mutableMapOf("queuePassword" to queuePassword))
     }
 
     suspend fun getDummyPartySession(): PartySession?{

@@ -21,4 +21,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="main_activity_recent_sessions">RECENT SESSIONS</string>
+    <string name="create_party_session_create_session">CREATE SESSION</string>
 </resources>

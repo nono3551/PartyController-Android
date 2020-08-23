@@ -1,4 +1,4 @@
-package com.partyremote.android.ui.create_party_session
+package com.partyremote.android.ui.screens.create_party_session
 
 import android.app.Application
 import androidx.lifecycle.ViewModelProvider

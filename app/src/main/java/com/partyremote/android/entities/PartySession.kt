@@ -9,5 +9,7 @@ data class PartySession(
     val currentSong: String?,
     val ownerPassword: String?,
     val queuePassword: String?,
-    val songsCount: Int?
+    val songsCount: Int?,
+    val playing: Boolean = false,
+    val lastTimeUsed: Date? = null
 )

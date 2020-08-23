@@ -9,7 +9,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.partyremote.android.R
-import com.partyremote.android.ui.main.MainActivity
+import com.partyremote.android.ui.screens.main.MainActivity
 import sk.backbone.android.shared.execution.Scopes
 
 class FcmService : FirebaseMessagingService(), BaseService {
