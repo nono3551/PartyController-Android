@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/gradient_green_to_black">
+    android:layout_height="wrap_content"
+    app:cardElevation="20dp"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="2.5dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
-        <ImageView
-            android:id="@+id/ui_main_session_view_appIcon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/ic_launcher_foreground" />
-        <TextView
-            android:id="@+id/ui_main_session_view_nameOfTheSession"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="100dp"
-            android:textColor="@android:color/white"
-            tools:text="name_of_the_session" />
-        <TextView
-            android:id="@+id/ui_main_session_numberOfSongs"
-            android:layout_width="80dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:text="#"
-            android:textColor="@android:color/white"
-            tools:text="Songs:{x}" />
-        <TextView
-            android:id="@+id/ui_main_session_view_Owner"
-            android:layout_width="300dp"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            tools:text="You are/not the owner of this session" />
-        <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/app_dark_green"
+        android:padding="10dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start">
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ui_main_session_view_name_of_session_and_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                tools:text="name_of_the_session (Rytmus)"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/ui_main_session_view_songs_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                tools:text="Remaining songs:{x}"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/ui_main_session_view_playlist_length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                tools:text="Playlist length:{x}"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <View
                 android:id="@+id/ui_party_session_view_line_small_first"
                 android:layout_width="0dp"
                 android:layout_height= "2dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.05"
+                app:layout_constraintWidth_percent="0.3"
                 android:background="@android:color/white" />
             <View
                 android:id="@+id/ui_party_session_view_line_small_second"
@@ -60,7 +59,7 @@
                 android:layout_height= "2dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ui_party_session_view_line_small_first"
-                app:layout_constraintWidth_percent="0.10"
+                app:layout_constraintWidth_percent="0.50"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/white" />
             <View
@@ -69,102 +68,66 @@
                 android:layout_height= "2dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ui_party_session_view_line_small_second"
-                app:layout_constraintWidth_percent="0.075"
+                app:layout_constraintWidth_percent="0.20"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/ui_main_session_view_context_menu"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/ui_main_session_in_view_toggle_song"
-                app:layout_constraintWidth_percent="0.15"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_baseline_vert" />
-            <ImageView
-                android:id="@+id/ui_main_session_in_view_toggle_song"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/ui_main_session_view_context_menu"
-                app:layout_constraintRight_toLeftOf="@id/ui_main_session_view_next_song"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintWidth_percent="0.15"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_baseline_play" />
-            <ImageView
-                android:id="@+id/ui_main_session_view_next_song"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/ui_main_session_in_view_toggle_song"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintWidth_percent="0.15"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_baseline_next" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical">
-        <View
-            android:layout_width="380dp"
-            android:layout_gravity="end"
-            android:layout_height= "2dp"
-            android:background="@android:color/white" />
-        <View
-            android:layout_width="200dp"
-            android:layout_marginTop="3dp"
-            android:layout_gravity="end"
-            android:layout_height= "2dp"
-            android:background="@android:color/white" />
-        <View
-            android:layout_width="40dp"
-            android:layout_marginTop="3dp"
-            android:layout_gravity="end"
-            android:layout_height= "2dp"
-            android:background="@android:color/white" />
-        <TextView
-            android:id="@+id/ui_main_session_view_currentSong"
-            android:layout_width="match_parent"
-            android:layout_weight="2"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            tools:text="Current song"
-            tools:ignore="NestedWeights" />
-        <TextView
-            android:id="@+id/ui_main_session_view_artist"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            tools:text="artist" />
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="4"
-            tools:ignore="NestedWeights">
-        </Space>
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/ui_main_session_view_not_owner_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                tools:text="You are not the owner of this session"
+                android:gravity="center"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ui_session_view_context_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/ui_session_view_toggle_song"
+                    app:layout_constraintWidth_percent="0.15"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_context_menu_dots" />
+                <ImageView
+                    android:id="@+id/ui_session_view_toggle_song"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ui_session_view_context_menu"
+                    app:layout_constraintRight_toLeftOf="@id/ui_session_view_next_song"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_play" />
+                <ImageView
+                    android:id="@+id/ui_session_view_next_song"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ui_session_view_toggle_song"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintWidth_percent="0.15"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_next" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+</androidx.cardview.widget.CardView>

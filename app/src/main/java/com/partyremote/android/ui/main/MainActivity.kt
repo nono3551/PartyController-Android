@@ -11,8 +11,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.partyremote.android.R
+import com.partyremote.android.entities.PartySession
+import com.partyremote.android.execution_handling.Executor
 import com.partyremote.android.ui.base.ToolbarActivity
+import com.partyremote.android.ui.components.PartySessionView
 import com.partyremote.android.ui.create_party_session.CreatePartySessionActivity
+import com.partyremote.android.ui.create_party_session.CreatePartySessionViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import sk.backbone.android.shared.utils.convertDensityPointsToPixels
 import sk.backbone.android.shared.utils.setSafeOnClickListener
@@ -49,10 +53,19 @@ class MainActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        layoutInflater.inflate(R.layout.ui_party_session_view, test).apply { this.layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)}
-        layoutInflater.inflate(R.layout.ui_party_session_view, test).apply { this.layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)}
-        layoutInflater.inflate(R.layout.ui_party_session_view, test).apply { this.layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)}
-        layoutInflater.inflate(R.layout.ui_party_session_view, test).apply { this.layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)}
-        layoutInflater.inflate(R.layout.ui_party_session_view, test).apply { this.layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)}
+
+        withExecutorParams {
+            Executor<PartySession?>(it).apply {
+                ioOperation = {
+                    CreatePartySessionViewModel.create(this@MainActivity).getDummyPartySession()
+                }
+                uiOperationOnSuccess = {
+                    main_activity_sessions_holder.addView(PartySessionView(this@MainActivity).apply { it?.let { partySession -> bindData(partySession) } })
+                    main_activity_sessions_holder.addView(PartySessionView(this@MainActivity).apply { it?.let { partySession -> bindData(partySession) } })
+                    main_activity_sessions_holder.addView(PartySessionView(this@MainActivity).apply { it?.let { partySession -> bindData(partySession) } })
+                    main_activity_sessions_holder.addView(PartySessionView(this@MainActivity).apply { it?.let { partySession -> bindData(partySession) } })
+                }
+            }.execute()
+        }
     }
 }
