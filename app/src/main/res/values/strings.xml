@@ -23,4 +23,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="main_activity_recent_sessions">RECENT SESSIONS</string>
     <string name="create_party_session_create_session">CREATE SESSION</string>
+    <string name="dialog_set_username_enter_username">Enter username:</string>
+    <string name="global_username">username</string>
+    <string name="global_confirm">Confirm</string>
+    <string name="error_empty_username">Username can not be empty</string>
 </resources>

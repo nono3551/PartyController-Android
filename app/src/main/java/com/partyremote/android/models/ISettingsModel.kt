@@ -7,7 +7,7 @@ import sk.backbone.android.shared.models.IModel
 interface ISettingsModel : IModel<ModelsProvider> {
     private val settingsSharedPreferences get() = SettingsSharedPreferences(context)
 
-    fun saveSettings(settings: Settings){
+    fun setSettings(settings: Settings){
         settingsSharedPreferences.setSettings(settings)
         currentSettings = settings
     }
