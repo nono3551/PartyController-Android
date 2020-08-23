@@ -21,7 +21,7 @@ app:elevation="0dp">
     app:contentInsetEnd="0dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:paddingTop="2dp"
         android:paddingBottom="2dp"
