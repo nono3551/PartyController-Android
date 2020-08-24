@@ -2,12 +2,10 @@ package com.partyremote.android.ui.screens.main
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.core.graphics.drawable.toDrawable
 import com.partyremote.android.R
 import com.partyremote.android.entities.PartySession
 import com.partyremote.android.execution_handling.Executor

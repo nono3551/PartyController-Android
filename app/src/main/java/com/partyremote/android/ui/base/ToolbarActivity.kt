@@ -7,9 +7,10 @@ import android.widget.TextView
 import com.partyremote.android.R
 import kotlinx.android.synthetic.main.ui_toolbar.*
 import kotlinx.android.synthetic.main.ui_toolbar.view.*
-import sk.backbone.android.shared.ui.screens.BaseSharedToolbarActivity
+import sk.backbone.android.shared.ui.screens.BaseSharedActivity
+import sk.backbone.android.shared.ui.screens.IToolbarActivity
 
-abstract class ToolbarActivity : BaseSharedToolbarActivity(){
+abstract class ToolbarActivity : BaseSharedActivity(), IToolbarActivity{
     open fun getLeftView() : View? = null
     open fun getCenterView() : View? = null
     open fun getRightView() : View? = null
@@ -22,7 +23,7 @@ abstract class ToolbarActivity : BaseSharedToolbarActivity(){
         return R.id.common_toolbar
     }
 
-    override fun refreshToolbar(){
+    override fun setupToolbar(){
         common_toolbar.toolbar_left_placeholder.removeAllViews()
         common_toolbar.toolbar_center_placeholder.removeAllViews()
         common_toolbar.toolbar_right_placeholder.removeAllViews()

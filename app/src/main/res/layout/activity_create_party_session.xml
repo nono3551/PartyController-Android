@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_green"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <com.partyremote.android.ui.components.CommonTextInput
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Session name"
+            android:hint="title"
+            android:padding="5dp"
+            app:textValidation="email"/>
+    </LinearLayout>
 </LinearLayout>
