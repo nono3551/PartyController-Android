@@ -7,7 +7,7 @@ import sk.backbone.parent.repositories.server.client.exceptions.*
 import sk.backbone.parent.utils.jsonToObject
 
 class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
-    override fun getDefaultErrorMessage(context: Context, exception: Throwable): String {
+    override fun getDefaultErrorMessage(context: Context, throwable: Throwable): String {
         return context.getString(R.string.exception_unexpected_error)
     }
 
