@@ -12,10 +12,10 @@ import android.widget.TextView
 import com.partyremote.android.R
 import com.partyremote.android.ui.valdiations.IBaseValidableInput
 import kotlinx.android.synthetic.main.ui_common_text_input.view.*
-import sk.backbone.android.shared.ui.components.StateSavingLinearLayout
-import sk.backbone.android.shared.ui.validations.IValidator
-import sk.backbone.android.shared.ui.validations.ValidationError
-import sk.backbone.android.shared.ui.validations.text_validation.TextInputValidation
+import sk.backbone.parent.ui.components.StateSavingLinearLayout
+import sk.backbone.parent.ui.validations.IValidator
+import sk.backbone.parent.ui.validations.ValidationError
+import sk.backbone.parent.ui.validations.text_validation.TextInputValidation
 
 open class CommonTextInput : StateSavingLinearLayout, IBaseValidableInput<String> {
     private var originalBackgroundTint : ColorStateList? = null

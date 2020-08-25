@@ -4,11 +4,11 @@ import android.content.Context
 import com.android.volley.toolbox.JsonRequest
 import com.google.gson.ExclusionStrategy
 import com.partyremote.android.BuildConfig
-import sk.backbone.android.shared.repositories.server.BaseServerRepository
-import sk.backbone.android.shared.repositories.server.client.JsonHttpRequest
-import sk.backbone.android.shared.repositories.server.client.ITokensProvider
+import sk.backbone.parent.repositories.server.ParentServerRepository
+import sk.backbone.parent.repositories.server.client.ITokensProvider
+import sk.backbone.parent.repositories.server.client.JsonHttpRequest
 
-abstract class ServerRepository(context: Context): BaseServerRepository<Any?>(context, object : ITokensProvider<Any?>{ override fun getLocalTokens(): Any? { return null } }) {
+abstract class ServerRepository(context: Context): ParentServerRepository<Any?>(context, object : ITokensProvider<Any?> { override fun getLocalTokens(): Any? { return null } }) {
     override val additionalHeadersProvider: (JsonRequest<*>) -> Map<String, String>
         get() = { _ ->
             val headers: MutableMap<String, String> = mutableMapOf()

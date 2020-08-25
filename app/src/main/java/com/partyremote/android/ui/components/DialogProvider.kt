@@ -3,7 +3,7 @@ package com.partyremote.android.ui.components
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import com.partyremote.android.R
-import sk.backbone.android.shared.execution.IExecutorDialogProvider
+import sk.backbone.parent.execution.IExecutorDialogProvider
 
 class DialogProvider: IExecutorDialogProvider {
     fun showYesNoDialog(context: Context, title: String, message: String, onYesClicked: (() -> Unit)? = null, onNoClicked: (() -> Unit)? = null, cancellable: Boolean = false): AlertDialog {

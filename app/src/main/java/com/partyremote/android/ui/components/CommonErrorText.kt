@@ -5,7 +5,7 @@ import android.text.Editable
 import android.util.AttributeSet
 import com.partyremote.android.R
 import kotlinx.android.synthetic.main.ui_common_error_text.view.*
-import sk.backbone.android.shared.ui.components.StateSavingLinearLayout
+import sk.backbone.parent.ui.components.StateSavingLinearLayout
 
 class CommonErrorText : StateSavingLinearLayout {
     var value: String?

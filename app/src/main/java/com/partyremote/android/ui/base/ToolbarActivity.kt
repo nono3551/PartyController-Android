@@ -7,10 +7,10 @@ import android.widget.TextView
 import com.partyremote.android.R
 import kotlinx.android.synthetic.main.ui_toolbar.*
 import kotlinx.android.synthetic.main.ui_toolbar.view.*
-import sk.backbone.android.shared.ui.screens.BaseSharedActivity
-import sk.backbone.android.shared.ui.screens.IToolbarActivity
+import sk.backbone.parent.ui.screens.IToolbarActivity
+import sk.backbone.parent.ui.screens.ParentActivity
 
-abstract class ToolbarActivity : BaseSharedActivity(), IToolbarActivity{
+abstract class ToolbarActivity : ParentActivity(), IToolbarActivity {
     open fun getLeftView() : View? = null
     open fun getCenterView() : View? = null
     open fun getRightView() : View? = null

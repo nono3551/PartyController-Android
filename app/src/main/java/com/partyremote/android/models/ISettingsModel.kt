@@ -2,7 +2,7 @@ package com.partyremote.android.models
 
 import com.partyremote.android.entities.Settings
 import com.partyremote.android.repositories.shared_preferences.SettingsSharedPreferences
-import sk.backbone.android.shared.models.IModel
+import sk.backbone.parent.models.IModel
 
 interface ISettingsModel : IModel<ModelsProvider> {
     private val settingsSharedPreferences get() = SettingsSharedPreferences(context)

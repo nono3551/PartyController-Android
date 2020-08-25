@@ -1,8 +1,8 @@
 package com.partyremote.android.application
 
 import android.content.Context
-import sk.backbone.android.shared.application.IService
 import com.partyremote.android.models.ModelsProvider
+import sk.backbone.parent.application.IService
 
 interface BaseService : IService<ModelsProvider> {
     override val modelsProvider: ModelsProvider

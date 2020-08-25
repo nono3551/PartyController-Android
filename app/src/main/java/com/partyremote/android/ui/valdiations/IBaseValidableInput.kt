@@ -2,8 +2,8 @@ package com.partyremote.android.ui.valdiations
 
 import android.view.ViewGroup
 import com.partyremote.android.ui.components.CommonErrorText
-import sk.backbone.android.shared.ui.validations.IValidableInput
-import sk.backbone.android.shared.ui.validations.ValidationError
+import sk.backbone.parent.ui.validations.IValidableInput
+import sk.backbone.parent.ui.validations.ValidationError
 
 interface IBaseValidableInput<ValueType> : IValidableInput<ValueType> {
     fun getValidationsViewHolder(): ViewGroup?

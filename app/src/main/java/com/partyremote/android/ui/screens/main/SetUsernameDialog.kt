@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.partyremote.android.R
 import com.partyremote.android.entities.Settings
 import kotlinx.android.synthetic.main.dialog_set_username.view.*
-import sk.backbone.android.shared.utils.setSafeOnClickListener
+import sk.backbone.parent.utils.setSafeOnClickListener
 
 class SetUsernameDialog(private val activity: MainActivity) : AlertDialog(activity) {
     init {
