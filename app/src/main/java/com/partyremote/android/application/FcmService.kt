@@ -10,7 +10,7 @@ import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.partyremote.android.R
 import com.partyremote.android.ui.screens.main.MainActivity
-import sk.backbone.android.shared.execution.Scopes
+import sk.backbone.parent.execution.Scopes
 
 class FcmService : FirebaseMessagingService(), BaseService {
     private val scopes = Scopes()

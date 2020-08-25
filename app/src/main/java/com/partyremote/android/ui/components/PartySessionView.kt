@@ -5,22 +5,22 @@ import android.util.AttributeSet
 import com.partyremote.android.R
 import com.partyremote.android.entities.PartySession
 import kotlinx.android.synthetic.main.ui_party_session_view.view.*
-import sk.backbone.android.shared.ui.components.StateSavingLinearLayout
+import sk.backbone.parent.ui.components.StateSavingLinearLayout
 
 class PartySessionView : StateSavingLinearLayout {
     constructor(context: Context) : super(context){
-        init(context, null)
+        init(context)
     }
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs){
-        init(context, attrs)
+        init(context)
     }
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        init(context, attrs)
+        init(context)
     }
 
-    private fun init(context: Context, attrs: AttributeSet?) {
+    private fun init(context: Context) {
         inflate(context, R.layout.ui_party_session_view, this)
     }
 

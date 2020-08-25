@@ -9,6 +9,7 @@ import android.view.View
 import com.partyremote.android.R
 import com.partyremote.android.ui.base.ToolbarActivity
 import kotlinx.coroutines.launch
+import sk.backbone.parent.utils.validateInputs
 
 class CreatePartySessionActivity : ToolbarActivity() {
 
@@ -19,7 +20,7 @@ class CreatePartySessionActivity : ToolbarActivity() {
         scopes.default.launch {
             while (true){
                 scopes.ui.launch {
-                    validateInputs()
+                    getRootView()?.validateInputs()
                 }
                 sleep(2000)
             }

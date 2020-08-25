@@ -13,8 +13,7 @@ import com.partyremote.android.ui.base.ToolbarActivity
 import com.partyremote.android.ui.components.PartySessionView
 import com.partyremote.android.ui.screens.create_party_session.CreatePartySessionActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import sk.backbone.android.shared.utils.setSafeOnClickListener
-
+import sk.backbone.parent.utils.setSafeOnClickListener
 
 class MainActivity : ToolbarActivity() {
     val viewModel by lazy {

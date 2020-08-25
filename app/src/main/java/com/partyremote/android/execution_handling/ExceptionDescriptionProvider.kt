@@ -3,8 +3,8 @@ package com.partyremote.android.execution_handling
 import android.content.Context
 import com.partyremote.android.R
 import com.partyremote.android.repositories.server.client.ApiErrorWrapper
-import sk.backbone.android.shared.repositories.server.client.exceptions.*
-import sk.backbone.android.shared.utils.jsonToObject
+import sk.backbone.parent.repositories.server.client.exceptions.*
+import sk.backbone.parent.utils.jsonToObject
 
 class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
     override fun getDefaultErrorMessage(context: Context, throwable: Throwable): String {
@@ -13,7 +13,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseBadRequestException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: BadRequestException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -23,7 +23,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseAuthorizationException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: AuthorizationException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -32,7 +32,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parsePaymentException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: PaymentException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -41,7 +41,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseForbiddenException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: ForbiddenException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -50,7 +50,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseNotFoundException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: NotFoundException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -59,7 +59,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseConflictException(
         context: Context,
-        throwable: ConflictException,
+        exception: ConflictException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -68,7 +68,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseValidationException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: ValidationException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -77,7 +77,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseServerException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: ServerException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
@@ -86,7 +86,7 @@ class ExceptionDescriptionProvider: IExceptionDescriptionProvider {
 
     override fun parseCommunicationException(
         context: Context,
-        baseHttpException: BaseHttpException,
+        exception: CommunicationException,
         responseBody: String?,
         statusCode: Int?
     ): String? {
