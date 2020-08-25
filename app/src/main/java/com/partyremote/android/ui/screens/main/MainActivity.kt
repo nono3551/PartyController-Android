@@ -24,7 +24,7 @@ class MainActivity : ToolbarActivity() {
     override fun getRightView(): View? {
         return ImageView(this).apply {
             layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-            setImageResource(R.drawable.ic_baseline_add)
+            setImageResource(R.drawable.ic_arrows_plus)
             setSafeOnClickListener {
                 CreatePartySessionActivity.startActivity(this@MainActivity)
             }

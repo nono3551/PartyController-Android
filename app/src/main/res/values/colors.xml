@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="app_light_green">#84a98c</color>
-    <color name="app_green">#52796f</color>
-    <color name="app_dark_green">#2f3e46</color>
+
+    <color name="app_icon_color">#7f7f7f</color>
+
+    <color name="app_dark_dark">#F3212121</color>
+    <color name="app_dark">#AD212121</color>
+    <color name="app_grey">#7f7f7f</color>
+    <color name="app_orange">#f64335</color>
+
+
+
 </resources>

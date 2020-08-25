@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/app_dark_green"
+        android:background="@color/app_dark_dark"
         android:padding="10dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,21 +24,21 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:textColor="@android:color/white"
+                android:textColor="@color/app_orange"
                 tools:text="name_of_the_session (Rytmus)"
                 android:layout_marginBottom="5dp"/>
             <TextView
                 android:id="@+id/ui_main_session_view_songs_count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/darker_gray"
                 tools:text="Remaining songs:{x}"
                 android:layout_marginBottom="5dp"/>
             <TextView
                 android:id="@+id/ui_main_session_view_playlist_length"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/darker_gray"
                 tools:text="Playlist length:{x}"
                 android:layout_marginBottom="5dp"/>
         </LinearLayout>
@@ -47,13 +47,14 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="20dp"
+            android:paddingTop="10dp"
             android:paddingBottom="20dp">
             <TextView
                 android:id="@+id/ui_main_session_view_not_owner_warning"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:paddingBottom="5dp"
+                android:textColor="@android:color/darker_gray"
                 tools:text="You are not the owner of this session"
                 android:gravity="center"/>
 
@@ -71,7 +72,7 @@
                     app:layout_constraintWidth_percent="0.15"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_baseline_context_menu_dots" />
+                    android:src="@drawable/ic_arrows_hamburger_2" />
                 <ImageView
                     android:id="@+id/ui_session_view_toggle_song"
                     android:layout_width="0dp"
@@ -83,7 +84,7 @@
                     app:layout_constraintWidth_percent="0.15"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_baseline_play" />
+                    android:src="@drawable/ic_music_play_button" />
                 <ImageView
                     android:id="@+id/ui_session_view_next_song"
                     android:layout_width="0dp"
@@ -95,7 +96,7 @@
                     app:layout_constraintWidth_percent="0.15"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_baseline_next" />
+                    android:src="@drawable/ic_arrows_right_double_31" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </LinearLayout>
